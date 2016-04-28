@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
-import javax.inject.Inject;
-
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +15,7 @@ import kr.co.trito.sample.service.SampleService;
 public class SampleController {
     Logger log = Logger.getLogger(this.getClass());
      
-    @Inject
+    @Resource(name="sampleService")
     private SampleService sampleService;
      
     @RequestMapping(value="/sample/sampleMenuList.do")

@@ -9,7 +9,9 @@ import kr.co.trito.common.dao.AbstractDAO;
 @Repository("sampleDAO")
 public class SampleDAO extends AbstractDAO{
 	
-    public List<Map<String, Object>> selectBoardList(Map<String, Object> map) throws Exception{
+	
+    @SuppressWarnings("unchecked")
+	public List<Map<String, Object>> selectBoardList(Map<String, Object> map) throws Exception{
         return (List<Map<String, Object>>)selectList("sample.sampleUserList", map);
     }
 	
